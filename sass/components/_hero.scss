@@ -1,28 +1,75 @@
 .hero {
+  padding: 118px 0;
+
+  max-width: 1600px;
+  margin: 0 auto;
+  text-align: center;
+
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: var(--secondary-bacground-color);
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/background.jpg);
-  background-color: var(--secondary-bacground-color);
-  max-width: 1600px;
-  background-size: cover;
-  margin: 0 auto;
-  text-align: center;
-  padding: 200px 0;
-  background-repeat: no-repeat;
+    url(../images/hero/bg-img_sm.jpg);
+
+  @include mq(retina) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero/bg-img_sm@2x.jpg);
+  }
+
+  @include mq(tablet) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero/bg-img_md.jpg);
+
+    @include mq(retina) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero/bg-img_md@2x.jpg);
+    }
+  }
+  @include mq(desktop) {
+    padding: 200px 0;
+
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero/bg-img_lg.jpg);
+
+    @include mq(retina) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero/bg-img_lg@2x.jpg);
+    }
+  }
 }
 .hero-title {
-  max-width: 696px;
+  font-size: 26px;
+  line-height: 1.62;
+  max-width: 360px;
   color: #ffffff;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
   letter-spacing: 0.06em;
   margin: 0 auto;
   margin-bottom: 30px;
   text-transform: uppercase;
+  @include mq(desktop) {
+    font-size: 44px;
+    line-height: 1.36;
+    max-width: 696px;
+  }
 }
 .button-primary {
   align-self: center;
@@ -37,7 +84,7 @@
   border-radius: 4px;
   font-weight: bold;
   font-size: 16px;
-  line-height: 1, 9;
+  line-height: 1.9;
 }
 .icon-hero-container {
   display: flex;
@@ -47,8 +94,6 @@
   height: 120px;
   border-radius: 4px;
   background-color: #f5f4fa;
-  /* text-align: center; */
-  /* padding-top: 27px; */
   margin-bottom: 30px;
 }
 .icon-hero {

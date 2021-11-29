@@ -1,6 +1,7 @@
-@import "./utils/mixins";
 @import "./utils/variables";
+@import "./utils/mixins";
 @import "./utils/base";
+@import "./components/container";
 
 @import "./components/header";
 @import "./components/hero";
@@ -14,3 +15,4 @@
 @import "./components/modal";
 @import "./components/input";
 @import "./components/subscribe";
+@import "./components/modal-menu";

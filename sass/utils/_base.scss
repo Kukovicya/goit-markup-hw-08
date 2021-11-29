@@ -22,11 +22,7 @@ img {
   max-width: 100%;
   /* margin: 0; */
 }
-.container {
-  margin: 0 auto;
-  width: 1200px;
-  padding: 0 15px;
-}
+
 header {
   background-color: #ffffff;
 }
@@ -35,6 +31,7 @@ li {
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
 .section {
   padding: 94px 0 0 0;

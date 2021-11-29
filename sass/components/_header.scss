@@ -1,6 +1,9 @@
 header {
   background-color: #ffffff;
   border-bottom: 1px solid #ececec;
+  @include mq(mobile-only) {
+    padding: 10px 0;
+  }
 }
 .nav-container {
   display: flex;
@@ -26,8 +29,11 @@ span {
   color: var(--accent-color);
 }
 .site-nav {
-  display: flex;
-  padding: 0;
+  display: none;
+  @include mq(tablet) {
+    display: flex;
+    padding: 0;
+  }
 }
 .site-nav li {
   display: block;
@@ -76,11 +82,14 @@ span {
 }
 
 .auth-nav {
-  display: flex;
-  margin-left: auto;
-  padding: 0;
-  align-items: center;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: none;
+  @include mq(tablet) {
+    display: flex;
+    margin-left: auto;
+    padding: 0;
+    align-items: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .auth-nav .link {
@@ -107,4 +116,8 @@ span {
   height: 16px;
   fill: currentColor;
   margin-right: 10px;
+}
+.header-button {
+  background-color: transparent;
+  border: none;
 }
