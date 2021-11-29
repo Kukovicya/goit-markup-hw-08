@@ -1,0 +1,41 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+link {
+  margin: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  /* margin: 0; */
+}
+.container {
+  margin: 0 auto;
+  width: 1200px;
+  padding: 0 15px;
+}
+header {
+  background-color: #ffffff;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.section {
+  padding: 94px 0 0 0;
+}

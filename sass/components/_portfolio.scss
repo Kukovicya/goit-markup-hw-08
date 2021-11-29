@@ -1,0 +1,82 @@
+.example {
+  padding-bottom: 94px;
+  &__btn-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  &__btn-li:not(:first-child) {
+    margin-left: 8px;
+  }
+  &__img-example-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+    margin-bottom: -30px;
+    padding-inline-start: 0;
+  }
+  &__container-cart {
+    padding: 20px 24px;
+    border: 1px solid #eeeeee;
+    border-top: none;
+  }
+  &__img-example-item {
+    background: #fff;
+    width: 370px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  &__portfolio-link {
+    color: #212121;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
+  &__text {
+    margin-top: 4px;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
+  }
+}
+
+.example__portfolio-link {
+  display: block;
+  border-top: none;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f,
+      0px 1px 1px 0px #0000001f;
+  }
+}
+
+/*2knopka*/
+.button-secondary {
+  min-height: 38px;
+  padding: 6px 22px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  color: var(--primary-text-color);
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.16;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    box-shadow: 0px 2px 2px 0px #0000001f, 0px 1px 2px 0px #00000014,
+      0px 3px 1px 0px #0000001a;
+  }
+}
