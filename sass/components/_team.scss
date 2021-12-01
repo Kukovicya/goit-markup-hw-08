@@ -1,11 +1,17 @@
-section-team {
+.section-team {
   background-color: #f5f4fa;
   padding: 94px 15px;
 }
 .section-team-list {
-  display: flex;
-  padding: 0;
-  margin-right: -30px;
+  // display: flex;
+  // padding: 0;
+  // margin-right: -30px;
+  @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+    margin-bottom: -30px;
+  }
 }
 .section-team-list-li {
   background-color: #ffffff;
@@ -14,6 +20,15 @@ section-team {
   border-bottom-left-radius: 4px;
   box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
     0px 1px 3px 0px #0000001f;
+  @include mq(tablet) {
+    width: 354px;
+    margin: 0 30px 30px 0;
+  }
+
+  @include mq(desktop) {
+    width: 270px;
+    margin-right: 30px;
+  }
 }
 .section-team-list img {
   max-width: none;
@@ -22,9 +37,17 @@ section-team {
 .section-team .title {
   text-align: center;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
+  font-size: 28px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
+  @include mq(tablet) {
+  }
+
+  @include mq(desktop) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
+  }
 }
 .section-team .text {
   margin-top: 10px;

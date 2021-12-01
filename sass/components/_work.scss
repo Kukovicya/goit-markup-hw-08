@@ -7,8 +7,16 @@
   letter-spacing: 0.03em;
 }
 .section-work {
+  padding-top: 0;
+  display: none;
+
+  @include mq(desktop) {
+    display: block;
+  }
+
   padding-bottom: 94px;
 }
+
 .section-work-list {
   display: flex;
   padding: 0;

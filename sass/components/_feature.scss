@@ -1,6 +1,12 @@
 .feature {
-  display: flex;
-  padding: 0;
+  // display: flex;
+  // padding: 0;
+  @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+    margin-bottom: -30px;
+  }
 }
 .feature .title {
   font-size: 14px;
@@ -11,9 +17,22 @@
   margin-bottom: 10px;
   max-width: 270px;
 }
-.feature li:not(:last-child) {
-  margin-right: 30px;
+
+.feature-li {
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
+  @include mq(tablet) {
+    margin-right: 30px;
+    width: 354px;
+  }
+  @include mq(desktop) {
+    width: 270px;
+  }
 }
+// .feature li:not(:last-child) {
+//   margin-right: 30px;
+// }
 .feature p {
   max-width: 270px;
 }

@@ -117,7 +117,39 @@ span {
   fill: currentColor;
   margin-right: 10px;
 }
-.header-button {
+.header__button {
   background-color: transparent;
   border: none;
+  @include mq(tablet) {
+    display: none;
+  }
+}
+.contacts {
+  &__item {
+    display: flex;
+
+    @include mq(tablet-only) {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    @include mq(desktop) {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+  &__svg {
+    fill: currentColor;
+    margin-right: 10px;
+  }
+  &__link {
+    color: var(--silvercolor);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    /* animation */
+    transition: color var(--animation);
+  }
 }
