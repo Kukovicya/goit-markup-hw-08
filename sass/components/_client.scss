@@ -41,44 +41,45 @@
   }
 }
 
-.client-list {
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -30px;
-  margin-bottom: -30px;
-  @include mq(desktop) {
-    flex-wrap: nowrap;
-  }
-  justify-content: center;
-}
+// .client-list {
+//   padding: 0;
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin-right: -30px;
+//   margin-bottom: -30px;
+//   @include mq(desktop) {
+//     flex-wrap: nowrap;
+//   }
+//   justify-content: center;
+// }
 
-.client-list li {
-  width: 210px;
-  &:nth-last-of-type(2n) {
-    margin-right: 30px;
-  }
-  margin-bottom: 30px;
-}
-@include mq(tablet) {
-  &:nth-last-of-type(2n + 1) {
-    margin-right: 30px;
-  }
-  width: 226px;
-}
-@include mq(desktop) {
-  width: 170px;
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
-}
+// .client-list li {
+// width: 210px;
+// padding: 15px;
+// &:nth-last-of-type(2n) {
+//   margin-right: 30px;
+// }
+// margin-bottom: 30px;
+// }
+// @include mq(tablet) {
+// &:nth-last-of-type(2n + 1) {
+//   margin-right: 30px;
+// }
+// width: 226px;
+// }
+// @include mq(desktop) {
+// width: 170px;
+// &:not(:last-child) {
+//   margin-right: 30px;
+// }
+// }
 
 .client-list-link {
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  // width: 170px;
-  // height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
@@ -93,7 +94,47 @@
   }
   margin: 0;
 }
+.client-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
+  margin-bottom: -30px;
+
+  @include mq(tablet) {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: -30px;
+  }
+  @include mq(desktop) {
+    flex-wrap: nowrap;
+  }
+}
+
+.client-list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92px;
+  border: 1px solid var(--bordedclients);
+  border-radius: 4px;
+  transition: border-color var(--animation);
+  margin-bottom: 30px;
+  margin-right: 30px;
+  flex-basis: calc((100% - 60px) / 2);
+
+  @include mq(mobile-only) {
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+  @include mq(tablet) {
+    flex-basis: calc((100% - 90px) / 3);
+  }
+  @include mq(desktop) {
+    flex-basis: calc((100% - 150px) / 6);
+  }
+}
 .icon-client {
   width: 106px;
   height: 60px;
